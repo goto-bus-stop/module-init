@@ -1,7 +1,6 @@
 var fs = require('fs')
 var path = require('path')
 var util = require('util')
-var extend = util._extend
 var EventEmitter = require('events').EventEmitter
 var camelCase = require('camel-case')
 var cd = require('shelljs').cd
@@ -41,9 +40,9 @@ util.inherits(ModuleInit, EventEmitter)
 ModuleInit.OPTIONS = OPTIONS
 
 ModuleInit.prototype.set = function set (data) {
-  var defaults = extend({}, OPTIONS.defaults)
-  if (this.data) extend(this.data, data || {})
-  else this.data = extend(defaults, data || {})
+  var defaults = Object.assign({}, OPTIONS.defaults)
+  if (this.data) Object.assign(this.data, data || {})
+  else this.data = Object.assign(defaults, data || {})
 }
 
 ModuleInit.prototype.validate = function validate () {
