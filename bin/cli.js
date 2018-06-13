@@ -94,10 +94,20 @@ var questions = [
   }
 ]
 
-if (argv.force) {
-  force()
-} else {
-  prompt()
+main().then(() => {
+  process.exit(0)
+}, () => {
+  process.exit(1)
+})
+async function main () {
+  var data
+  if (argv.force) {
+    data = await force()
+  } else {
+    data = await prompt()
+  }
+  data = prepData(data)
+  await init(data)
 }
 
 function catchInputErrors () {
@@ -149,15 +159,11 @@ function force () {
     }
   }
 
-  data = prepData(data)
-  init(data)
+  return data
 }
 
 function prompt () {
-  inquirer.prompt(questions, function (data) {
-    data = prepData(data)
-    init(data)
-  })
+  return inquirer.prompt(questions)
 }
 
 function prepData (data) {
@@ -184,24 +190,26 @@ function prepData (data) {
 }
 
 function init (data) {
-  moduleInit(data)
-    .on('create', function (file) {
-      // file created
-      console.log(chalk.green('✓ ') + chalk.bold(file) + ' created')
-    })
-    .on('warn', function (msg) {
-      // something weird happened
-      console.log(chalk.yellow('✗ ' + msg))
-    })
-    .on('err', function (err) {
-      // something went horribly wrong!
-      console.error(err)
-      process.exit(1)
-    })
-    .on('done', function (res) {
-      // we did it!
-      console.log(chalk.green('✓ ') + chalk.bold(res.pkgName) + ' initialized')
-      process.exit(0)
-    })
-    .run() // run the thing
+  return new Promise((resolve, reject) => {
+    moduleInit(data)
+      .on('create', function (file) {
+        // file created
+        console.log(chalk.green('✓ ') + chalk.bold(file) + ' created')
+      })
+      .on('warn', function (msg) {
+        // something weird happened
+        console.log(chalk.yellow('✗ ' + msg))
+      })
+      .on('err', function (err) {
+        // something went horribly wrong!
+        console.error(err)
+        reject(err)
+      })
+      .on('done', function (res) {
+        // we did it!
+        console.log(chalk.green('✓ ') + chalk.bold(res.pkgName) + ' initialized')
+        resolve(res)
+      })
+      .run() // run the thing
+  })
 }
