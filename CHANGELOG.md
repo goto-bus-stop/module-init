@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.6.0
+* fork to goto-bus-stop/create
+* remove cache from .travis.yml
+* run CI tests on node 4, 6, 8, 10
+* specify a version for `standard`
+* update dependencies
+* remove semistandard
+* remove site
+
 ## [1.5.0](https://github.com/ungoldman/module-init/releases/v1.5.0) - 2016-09-17
 
 [view diff](https://github.com/ungoldman/module-init/compare/v1.4.0...v1.5.0)
