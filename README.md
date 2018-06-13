@@ -50,7 +50,7 @@ Optionally runs `git init` and `npm install` in the new module directory.
 ## Install
 
 ```
-npm install module-init -g
+npm install @goto-bus-stop/create -g
 ```
 
 ## Usage
@@ -58,8 +58,8 @@ npm install module-init -g
 ### CLI
 
 ```
-$ module-init --help
-Usage: module-init [options]
+$ npm init @goto-bus-stop --help
+Usage: @goto-bus-stop/create [options]
     --dir, -d             specify module directory (default: cwd)
     --version, -v         show version information
     --force, -f           skip prompt and init with defaults
@@ -69,7 +69,7 @@ Usage: module-init [options]
 #### Example
 
 ```
-~ $ module-init -d new-project
+~ $ npm init @goto-bus-stop -d new-project
 ? name: new-project
 ? version: 1.0.0
 ? description:
