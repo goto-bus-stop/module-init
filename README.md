@@ -32,7 +32,7 @@ The following list of files are created based on user input:
   - Optionally generates contributing guidelines based on [CONTRIBUTING.md](https://github.com/ungoldman/CONTRIBUTING.md) boilerplate.
 - **package.json**
   - Fills out all standard fields.
-  - Adds code style linter ([`standard`](https://github.com/feross/standard) or [`semistandard`](https://github.com/Flet/semistandard)) to `devDependencies`.
+  - Adds code style linter ([`standard`](https://github.com/feross/standard) to `devDependencies`.
   - Adds [`tape`](https://github.com/substack/tape) & [`tap-spec`](https://github.com/scottcorgan/tap-spec) to `devDependencies`.
   - Sets up `npm test` script.
   - Runs [`fixpack`](https://github.com/HenrikJoreteg/fixpack).
@@ -77,7 +77,6 @@ Usage: module-init [options]
 ? license: ISC
 ? private: No
 ? CONTRIBUTING.md: Yes
-? linter: standard
 ? git init: Yes
 ? npm install: Yes
 Initialized empty Git repository in /Users/yourname/new-project/.git/
@@ -117,7 +116,6 @@ var options = {
   pkgDescription: 'description',    // optional
   pkgKeywords: 'one, two, three',   // optional
   pkgContributing: true,            // optional, default: true
-  pkgLinter: 'standard',            // optional, default: standard
   pkgLicense: 'ISC',                // optional, default: ISC
   private: true,                    // optional, default: false (omitted if false)
   dir: 'project-directory'          // optional: default: cwd

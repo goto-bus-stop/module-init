@@ -81,13 +81,6 @@ var questions = [
     default: true
   },
   {
-    type: 'list',
-    name: 'pkgLinter',
-    message: 'linter',
-    choices: ['standard', 'semistandard'],
-    default: 'standard'
-  },
-  {
     type: 'confirm',
     name: 'gitInit',
     message: 'git init',

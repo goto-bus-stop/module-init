@@ -11,9 +11,6 @@ function getTemplate (tpl) {
       case 'LICENSE.md':
         filePath = path.join(__dirname, filename, data.pkgLicense + '.mustache')
         break
-      case 'test/index.js':
-        filePath = path.join(__dirname, filename, data.pkgLinter + '.mustache')
-        break
       default:
         filePath = path.join(__dirname, filename + '.mustache')
     }
@@ -54,9 +51,5 @@ module.exports = [
   {
     file: 'package.json',
     name: 'pkgJson'
-  },
-  {
-    file: 'test/index.js',
-    name: 'pkgLinter'
   }
 ].map(getTemplate)

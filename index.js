@@ -18,15 +18,13 @@ var OPTIONS = {
     'usrGithub'
   ],
   valid: {
-    pkgLicense: ['Apache-2.0', 'BSD-3-Clause', 'CC0-1.0', 'ISC', 'MIT', 'UNLICENSED'],
-    pkgLinter: ['standard', 'semistandard']
+    pkgLicense: ['Apache-2.0', 'BSD-3-Clause', 'CC0-1.0', 'ISC', 'MIT', 'UNLICENSED']
   },
   defaults: {
     'dir': process.cwd(),
     'gitInit': true,
     'pkgContributing': true,
-    'pkgLicense': 'ISC',
-    'pkgLinter': 'standard',
+    'pkgLicense': 'Apache-2.0',
     'pkgVersion': '1.0.0',
     'npmInstall': true
   }
