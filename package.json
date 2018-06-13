@@ -10,7 +10,6 @@
     "url": "https://github.com/goto-bus-stop/npm-create/issues"
   },
   "dependencies": {
-    "async": "^2.6.1",
     "camel-case": "^3.0.0",
     "chalk": "^2.4.1",
     "cliclopts": "^1.1.0",
