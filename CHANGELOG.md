@@ -2,8 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/)
-and this project adheres to [Semantic Versioning](http://semver.org/).
+This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.5.0](https://github.com/ungoldman/module-init/releases/v1.5.0) - 2016-09-17
 
