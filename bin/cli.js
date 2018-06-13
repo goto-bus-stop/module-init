@@ -66,7 +66,7 @@ var questions = [
     name: 'pkgLicense',
     message: 'license',
     choices: ['Apache-2.0', 'BSD-3-Clause', 'CC0-1.0', 'ISC', 'MIT', 'UNLICENSED'],
-    default: 'ISC'
+    default: 'Apache-2.0'
   },
   {
     type: 'confirm',
@@ -79,6 +79,12 @@ var questions = [
     name: 'pkgContributing',
     message: 'CONTRIBUTING.md',
     default: true
+  },
+  {
+    type: 'confirm',
+    name: 'lockfile',
+    message: 'use a lockfile',
+    default: false,
   },
   {
     type: 'confirm',
@@ -185,6 +191,8 @@ function prepData (data) {
       })
       .join(', ')
   }
+
+  data.pkgConfig = !data.lockfile
 
   return data
 }

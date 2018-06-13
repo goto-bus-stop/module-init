@@ -51,5 +51,9 @@ module.exports = [
   {
     file: 'package.json',
     name: 'pkgJson'
+  },
+  {
+    file: '.npmrc',
+    name: 'pkgConfig'
   }
 ].map(getTemplate)
