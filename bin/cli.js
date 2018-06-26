@@ -49,7 +49,7 @@ var questions = [
     type: 'input',
     name: 'pkgVersion',
     message: 'version',
-    default: '1.0.0'
+    default: '0.0.0'
   },
   {
     type: 'input',
@@ -78,7 +78,7 @@ var questions = [
     type: 'confirm',
     name: 'pkgContributing',
     message: 'CONTRIBUTING.md',
-    default: true
+    default: false
   },
   {
     type: 'confirm',

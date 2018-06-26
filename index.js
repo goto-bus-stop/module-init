@@ -24,7 +24,7 @@ var OPTIONS = {
     gitInit: true,
     pkgContributing: true,
     pkgLicense: 'Apache-2.0',
-    pkgVersion: '1.0.0',
+    pkgVersion: '0.0.0',
     npmInstall: true,
     pkgConfig: false
   }
