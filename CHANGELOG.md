@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.8.0
+* default to version 0.0.0
+* add a "table" (line) of contents to the readme template
+
 ## 1.7.0
 * optionally disable lockfiles
 
