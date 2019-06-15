@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.0
+* update tape and standard
+* update default ci matrix
+* remove tap-spec
+
 ## 1.8.0
 * default to version 0.0.0
 * add a "table" (line) of contents to the readme template
