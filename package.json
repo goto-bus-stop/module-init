@@ -1,7 +1,7 @@
 {
   "name": "@goto-bus-stop/create",
   "description": "Create a new node module with all the right stuff.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Nate Goldman <ungoldman@gmail.com>",
   "bin": {
     "npm-create": "./bin/cli.js"
