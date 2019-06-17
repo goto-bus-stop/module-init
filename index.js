@@ -22,6 +22,7 @@ var OPTIONS = {
   defaults: {
     dir: process.cwd(),
     gitInit: true,
+    pkgCoc: true,
     pkgContributing: true,
     pkgLicense: 'Apache-2.0',
     pkgVersion: '0.0.0',

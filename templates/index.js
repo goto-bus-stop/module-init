@@ -53,6 +53,10 @@ module.exports = [
     name: 'pkgJson'
   },
   {
+    file: 'CODE_OF_CONDUCT.md',
+    name: 'pkgCoc'
+  },
+  {
     file: '.npmrc',
     name: 'pkgConfig'
   }

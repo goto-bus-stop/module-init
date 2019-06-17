@@ -84,7 +84,7 @@ var questions = [
     type: 'confirm',
     name: 'lockfile',
     message: 'use a lockfile',
-    default: false,
+    default: false
   },
   {
     type: 'confirm',
